@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <style type="text/css">
+        body {
+            background: #e0e0e0; /* Same as button background */
+            font-family: Arial, sans-serif; /* Optional: To set a clean font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main {
+            background: #e0e0e0; /* Same as button background */
+            font-family: Arial, sans-serif; /* Optional: To set a clean font */
+            display: grid;
+            grid-items: center;
+            height: 50vh;
+            margin: 0;
+        }
+        .subbutton {
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: #333; /* Adjust text color as needed */
+            margin-top: 60px;
+            margin-left: 30%;
+            padding: 10px 20px; /* Adjust padding for better button size */
+            width: 10vw !important;
+            border-radius: 50px;
+            background: #e0e0e0;
+            box-shadow: 5px 5px 10px #c5c5c5,
+              -5px -5px 10px #fbfbfb;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .subbutton:hover {
+            box-shadow: inset 5px 5px 10px #c5c5c5,
+                      inset -5px -5px 10px #fbfbfb;
+        }
+        .keycard{
+            width: 50vw !important;
+            border-radius: 50px !important;
+            background-color: #e0e0e0;
+            box-shadow:  5px 5px 10px #bebebe,
+                         -5px -5px 10px #ffffff;
+            padding: 10px 40px;
+        }
+
+        .keycard:hover{
+            border-radius: 50px;
+            background: #e0e0e0;
+            border-radius: 50px;
+            box-shadow: inset 5px 5px 10px #bebebe,
+                inset -5px -5px 10px #ffffff;
+        }
+        .listcolumn{
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+            <h1 class="text-5xl mx-40">Articles</h1>
+            <ul class="listcolumn">
+                <% articles.forEach(article => { %>
+                    <li><a href="/articles/<%= article.id %>" class="overflow-hidden rounded-lg transition w-1/2 keycard"><%= article.title %></a></li>
+                <% }); %>
+            </ul>
+            <a href="/" class="text-gray-600 hover:text-gray-900 subbutton">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article System</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <style type="text/css">
+        body {
+            background: #e0e0e0; /* Same as button background */
+            font-family: Arial, sans-serif; /* Optional: To set a clean font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main {
+            background: #e0e0e0; /* Same as button background */
+            font-family: Arial, sans-serif; /* Optional: To set a clean font */
+            display: grid;
+            grid-items: center;
+            height: 20vh;
+            margin: 0;
+        }
+
+        .subbutton {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: #333; /* Adjust text color as needed */
+            margin-top: 30px;
+            margin-left: 40%;
+            padding: 10px 20px; /* Adjust padding for better button size */
+            width: 30vw !important;
+            border-radius: 50px;
+            background: #e0e0e0;
+            box-shadow: 5px 5px 10px #c5c5c5,
+              -5px -5px 10px #fbfbfb;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .subbutton:hover {
+            box-shadow: inset 5px 5px 10px #c5c5c5,
+                      inset -5px -5px 10px #fbfbfb;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="flex justify-center align-center" style="place-self: center;">
+            <h1 class="text-5xl mx-40">Welcome to the Article System</h1>    
+        </div>
+        <br/>
+        <div class="flex justify-center align-center" style="place-self: center;">
+            <a href="/articles" class="subbutton">View Articles</a>    
+        </div>
+    </div>
+</body>
+</html>
